@@ -1,0 +1,27 @@
+{
+  "name": "@ryanxili/tmdb-mcp",
+  "version": "1.0.0",
+  "description": "TMDB API MCP Server - Search movies, TV shows, trending, and more",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["tmdb", "mcp", "movie", "tv", "mcp-server"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanxili/tmdb-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanxili/tmdb-mcp/issues"
+  },
+  "homepage": "https://github.com/ryanxili/tmdb-mcp#readme"
+}
