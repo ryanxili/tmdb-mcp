@@ -24,15 +24,24 @@ npm install @ryanxili/tmdb-mcp
 
 ## Quick Start
 
-### Via npx
+### Install
 
 ```bash
-npx @ryanxili/tmdb-mcp
+npm install @ryanxili/tmdb-mcp
 ```
 
-Set API key first:
+### Run
+
 ```bash
-TMDB_API_KEY=your_key npx @ryanxili/tmdb-mcp
+# With TMDB API key
+TMDB_API_KEY=your_key node node_modules/@ryanxili/tmdb-mcp/index.js
+```
+
+Or create a runner script:
+
+```bash
+# run.js
+import('@ryanxili/tmdb-mcp');
 ```
 
 ## Local Development
@@ -73,16 +82,14 @@ npm start
 
 ## MCP Client Configuration
 
-### Claude Desktop / OpenCode
-
 Add to your MCP config:
 
 ```json
 {
   "mcpServers": {
     "tmdb": {
-      "command": "npx",
-      "args": ["-y", "@ryanxili/tmdb-mcp"],
+      "command": "node",
+      "args": ["node_modules/@ryanxili/tmdb-mcp/index.js"],
       "env": {
         "TMDB_API_KEY": "your_api_key"
       }
@@ -91,14 +98,14 @@ Add to your MCP config:
 }
 ```
 
-Or with local path:
+Or with npx (requires internet):
 
 ```json
 {
   "mcpServers": {
     "tmdb": {
-      "command": "node",
-      "args": ["/path/to/tmdb-mcp/index.js"],
+      "command": "npx",
+      "args": ["-y", "@ryanxili/tmdb-mcp"],
       "env": {
         "TMDB_API_KEY": "your_api_key"
       }
