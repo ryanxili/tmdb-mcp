@@ -1,8 +1,11 @@
 {
   "name": "@ryanxili/tmdb-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TMDB API MCP Server - Search movies, TV shows, trending, and more",
   "main": "index.js",
+  "bin": {
+    "tmdb-mcp": "index.js"
+  },
   "type": "module",
   "scripts": {
     "start": "node index.js"
